@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct Order_Up_App_App: App {
+struct SimplyBowlsApp: App {
+    @StateObject private var cart = Cart()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MenuView()   
+                .environmentObject(cart)
         }
     }
 }
